@@ -1,9 +1,10 @@
 # makefile_x64 intended to go in distribution package
-CFLAGS=-pedantic -Wall -O2 -DX10_LINUX_BUILD
+CFLAGS=-pedantic -Wall -O2 -DX10_LINUX_BUILD 
+CFLAGS_COMMON=-no-pie
 CC=g++
 
 X10INC=-I../include
-X10LIB= -l fflyusb_x64 ../lib/unlockio_x64.o obj/authenticate_linux.o -pthread
+X10LIB= -l fflyusb ../lib/unlockio_x64.o obj/authenticate_linux.o -pthread
 
 
 all : clean binaries

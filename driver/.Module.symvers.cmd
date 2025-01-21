@@ -1,0 +1,1 @@
+cmd_/usr/src/xlinedevkit_x64/driver/Module.symvers := sed 's/\.ko$$/\.o/' /usr/src/xlinedevkit_x64/driver/modules.order | scripts/mod/modpost -m -a  -o /usr/src/xlinedevkit_x64/driver/Module.symvers -e -i Module.symvers   -T -
